@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Auteasy</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <span>Auteasy</span>
+                <img src="autism.png" alt="" srcset="">
+            </div>
+        </div>
+        <div class="header-tabs">
+            <a class="tab">inicio</a>
+            <a class="tab">ambientes</a>
+            <a class="tab">comunidade</a>
+        </div>
+    </header>
+    <section class="main-section">
+        <h1 class="title">
+            <span>Informações <br>Sobre</span>
+            <span>TEA </span>
+            <span>em <br></span>
+            <span>Mogi das Cruzes</span>
+        </h1>
+    </section>
+    <article class="main-article">
+        <div class="main-article-title">
+            <i id="ma-icon" class="fa fa-flag" aria-hidden="true"></i>
+            <h1 id="ma-title">Missão</h1>
+        </div>
+        <div class="main-article-text">
+            <button id="btn-previous"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <p id="text-content">
+                Garantir que as pessoas de Mogi das Cruzes tenham acesso democratizado a informações relacionadas a TEA
+            </p>
+            <button id="btn-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            <div id="item-1"></div>
+            <div id="item-2"></div>
+            <div id="item-3"></div>
+        </div>
+    </article>
+    <footer class="main-footer">
+        <p>Projeto desenvolvido com o intuito de ajudar, meu!</p>
+        <span class="bold">3ºAN Ciência da Computação, Extensionista III</span>
+        <div class="instituicoes">
+            <div class="autores">
+                <p class="bold">Desenvolvido por:</p>
+                <ul>
+                    <li>Rafael Reis</li>
+                    <li>Nohan Brendon</li>
+                    <li>Rafael Calixto</li>
+                </ul>
+            </div>
+            <div class="mentores">
+                <span class="bold"> Mentoras:</span>
+                <ul>
+                    <li>Isabela Santos</li>
+                    <li>Fernanda Talhati</li>
+                </ul>
+            </div>
+            <img src="logo.png" alt="" srcset="">
+            <div class="mogi">
+                <img src="bandeira-mogi.jpg" alt="">
+                <div style="display:flex;flex-direction:column">
+                    <span>Cidade de</span>
+                    <span>Mogi das Cruzes</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const motivos = {
+            "missao":"Garantir que as pessoas de Mogi das Cruzes tenham acesso democratizado a informações relacionadas a TEA",
+            "visao":"Se tornar um site referencia nisso aqui.",
+            "valores":"Respeito, inclusao, acessibilidade, inovacao"
+        }
+
+        btnNext = document.getElementById("btn-next");
+        btnPrevious = document.getElementById("btn-previous");
+        textContent = document.getElementById("text-content");
+        maTitle = document.getElementById("ma-title");
+        maIcon = document.getElementById("ma-icon");
+        item1 = document.getElementById("item-1");
+        item2 = document.getElementById("item-2");
+        item3 = document.getElementById("item-3");
+
+        current = 0;
+        previous = 2;
+        function changeTextNext() {
+            switch (current) {
+                case 0:
+                    textContent.innerText = motivos.missao
+                    maTitle.innerText = "Missão"
+                    maIcon.classList = "fa fa-flag"
+                    item3.style = ""
+                    item3.classList = ""
+                    item1.style.backgroundColor = "green"
+                    item1.classList = "tab-up"
+                    current = 1
+                    previous = 0
+                    break
+                case 1: 
+                    textContent.innerText = motivos.visao
+                    maTitle.innerText = "Visão"
+                    maIcon.classList = "fa fa-dot-circle-o"
+                    item1.style = ""
+                    item1.classList = ""
+                    item2.style.backgroundColor = "red"
+                    item2.classList = "tab-up"
+                    current = 2
+                    previous = 1
+                    break
+                case 2: 
+                    textContent.innerText = motivos.valores
+
+                    maTitle.innerText = "Valores"
+                    maIcon.classList = "fa fa-globe"
+                    item2.style = ""
+                    item2.classList = ""
+                    item3.style.backgroundColor = "teal"
+                    item3.classList = "tab-up"
+                    current = 0
+                    previous = 2
+                    break
+            }
+        }
+
+        function changeTextPrevious() {
+            switch (previous) {
+                case 0:
+                    textContent.innerText = motivos.valores
+                    maTitle.innerText = "Valores"
+                    maIcon.classList = "fa fa-globe"
+                    item1.style = ""
+                    item1.classList = ""
+                    item3.style.backgroundColor = "teal"
+                    item3.classList = "tab-up"
+                    current = 0
+                    previous = 2
+                    break
+                case 1: 
+                    textContent.innerText = motivos.missao
+                    maTitle.innerText = "Missão"
+                    maIcon.classList = "fa fa-flag"
+                    item2.style = ""
+                    item2.classList = ""
+                    item1.style.backgroundColor = "green"
+                    item1.classList = "tab-up"
+                    current = 1
+                    previous = 0
+                    break
+                case 2: 
+                    textContent.innerText = motivos.visao
+                    maTitle.innerText = "Visão"
+                    maIcon.classList = "fa fa-dot-circle-o"
+                    item3.style = ""
+                    item3.classList = ""
+                    item2.style.backgroundColor = "red"
+                    item2.classList = "tab-up"
+                    current = 2
+                    previous = 1
+                    break
+            }
+        }
+
+        btnNext.addEventListener("click", () => {
+            changeTextNext();
+            btnNext.childNodes[0].classList.remove("next")
+            setTimeout(() => {
+                btnNext.childNodes[0].classList.add("next")
+            }, 0)
+        })
+        btnPrevious.addEventListener("click", () => {
+            changeTextPrevious();
+            btnPrevious.childNodes[0].classList.remove("previous")
+            setTimeout(() => {
+                btnPrevious.childNodes[0].classList.add("previous")
+            }, 0)
+        })
+
+        window.onload = () => {
+            changeTextNext();
+        };
+    </script>
+</body>
+<img src="./diversidade.png" alt="" 
+    style="
+        position: absolute; 
+        width: 360px; 
+        top: 120px;
+        z-index: -700;
+        opacity: 0.4;
+    ">
+</html>
+
+<!-- 
+
+<a href="https://br.freepik.com/vetores-gratis/campanha-da-fita-do-autismo_136484277.htm#query=la%C3%A7o%20autismo%20png&position=1&from_view=keyword&track=ais_hybrid&uuid=b0965353-9a4d-4f08-96e3-6a59c3a2394d">Imagem de studiogstock</a> no Freepik 
+ 
+Imagem de studiogstock no Freepik
+
+-->
