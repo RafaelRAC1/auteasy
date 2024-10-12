@@ -138,14 +138,12 @@ body {
 
 #item-1 {
     background-color: rgb(182, 182, 182);
-    position: absolute;
     top: 0;
     left: 0;
 }
 
 #item-2 {
     background-color: rgb(146, 146, 146);
-    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -155,12 +153,12 @@ body {
 
 #item-3 {
     background-color: rgb(83, 83, 83);
-    position: absolute;
     top: 0;
     right: 0;
 }
 
 #item-1, #item-2, #item-3 {
+    position: absolute;
     height: 2px;
     width: 33.33%;
 }
