@@ -31,9 +31,8 @@
         <div class="main-tab">
             <div class="main-tab-content">
                 <div class="main-tab-header">
-                    <span class="selected">suporte</span>
-                    <span>recursos</span>
-                    <span>contato</span>
+                    <span id="suporte-tab" class="selected">suporte</span>
+                    <span id="recursos-tab" class="">recursos</span>
                 </div>
                 <div class="main-tab-body">
                     <div id="suporte" class="suporte">
@@ -60,10 +59,63 @@
                             </div>
                         </div>
                     </div>
+                    <div id="recursos" class="recursos" style="display: none;">
+                        <div class="jogos">
+                            <div id="jogos" class="icon-div">
+                                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                            </div>
+                            <span>Jogos</span>
+                        </div>
+                        <div class="videos">
+                            <div id="videos" class="icon-div">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </div>
+                            <span>Vídeos</span>
+                        </div>
+                        <div class="artigos">
+                            <div id="artigos" class="icon-div">
+                                <i class="fa fa-file-text" aria-hidden="true"></i>
+                            </div>
+                            <span>Artigos</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </article>
+    <div id="modulo-outside" class="modulo-outside" style="display: none;">
+        <div id="modulo-games" class="modulo-container" style="display: none;">
+            <div class="exit-bar">
+                <span id="fechar-modal-jogos">X</span>
+            </div>
+            <h2 class="modulo-title">
+                Jogos Sugeridos
+            </h2>
+            <div id="cards-id" class="cards">
+
+            </div>
+        </div>
+        <div id="modulo-videos" class="modulo-container" style="display: none;">
+            <div class="exit-bar">
+                <span id="fechar-modal-videos">X</span>
+            </div>
+            <h2 class="modulo-title">
+                Vídeos Sugeridos
+            </h2>
+            <ul id="videos-id" class="lista-videos">
+            </ul>
+        </div>
+        <div id="modulo-artigos" class="modulo-container" style="display: none;">
+            <div class="exit-bar">
+                <span id="fechar-modal-artigos">X</span>
+            </div>
+            <h2 class="modulo-title">
+                Artigos Sugeridos
+            </h2>
+            <ul id="artigos-id" class="lista-artigos">
+            </ul>
+        </div>
+    </div>
     <footer class="main-footer">
         <p>Projeto desenvolvido com o intuito de ajudar, meu!</p>
         <span class="bold">3ºAN Ciência da Computação, Extensionista III</span>
@@ -97,7 +149,66 @@
         const myjson =
         {
             abas: [
-                { "recursos": "" },
+                {
+                    "recursos":
+                        [
+                            {
+                                "jogos":
+                                    [
+                                        {
+                                            "titulo": "Puzzle Online",
+                                            "descricao": "Recomendado para memoria.",
+                                            "imagem": "https://images-na.ssl-images-amazon.com/images/I/91yOcAIm-oL.png",
+                                            "link": "www.google.com"
+                                        },
+                                        {
+                                            "titulo": "Jogo da Memória",
+                                            "descricao": "Jogo da memoria bacana.",
+                                            "imagem": "https://i.etsystatic.com/27759810/r/il/f178f4/3661501502/il_fullxfull.3661501502_3dzo.jpg",
+                                            "link": "www.google.com"
+                                        }
+                                    ]
+                            },
+                            {
+                                "videos":
+                                    [
+                                        {
+                                            "titulo": "O que é TEA?",
+                                            "autor": "ALUZAZUL",
+                                            "duracao": "5:46",
+                                            "link":"www.google.com",
+                                            "ano":"2017"
+                                        },
+                                        {
+                                            "titulo": "A história do Autismo. Como chegamos aos sintomas de TEA!",
+                                            "autor": "Mayra Gaiato",
+                                            "duracao": "4:42",
+                                            "link":"www.google.com",
+                                            "ano":"2020"
+                                        }
+                                    ]
+                            }, 
+                            {
+                                "artigos": 
+                                [
+                                    {
+                                        "titulo": "Um breve resumo sobre TEA",
+                                        "autor": "Julio Paviskovski",
+                                        "paginas": "22",
+                                        "link":"www.google.com",
+                                        "ano":"2022"
+                                    },
+                                    {
+                                        "titulo": "A vida de um autista",
+                                        "autor": "Armando Korvski",
+                                        "paginas": "120",
+                                        "link":"www.google.com",
+                                        "ano":"2009"
+                                    }
+                                ]
+                            }
+                        ]
+                },
                 {
                     "suporte":
                         [
@@ -106,12 +217,11 @@
                                 "resposta": "Proatividade, eu acho."
                             }
                         ]
-                },
-                { "contato": "" }
+                }
             ]
         }
 
-        function clickQuestaoEvent(element){
+        function clickQuestaoEvent(element) {
             element.addEventListener("click", (event) => {
                 if (event.target.tagName != "DIV") {
                     questaoParent = event.target.parentElement.parentElement
@@ -156,18 +266,18 @@
 
                 questaoDiv = document.createElement("div")
                 questaoDiv.classList.add("questao")
-                questaoDiv.innerHTML = 
-                `
+                questaoDiv.innerHTML =
+                    `
                     <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
                     <span>${e.pergunta}</span>
                 `
                 suporteLinhaDiv.appendChild(questaoDiv)
-                
+
                 respostaDiv = document.createElement("div")
                 respostaDiv.classList.add("resposta")
                 respostaDiv.classList.add("hidden")
-                respostaDiv.innerHTML = 
-                `
+                respostaDiv.innerHTML =
+                    `
                     <div class="resposta-content">
                         <span>${e.resposta}</span>
                     </div>
@@ -180,7 +290,159 @@
             })
         }
 
+        cardsId = document.getElementById("cards-id")
+        cardsId.innerHTML = ""
+
+        function loadJogos() {
+            /*
+            <div class="small-card">
+                <div class="image-container">
+                    <img src="https://th.bing.com/th/id/OIP.q9wDx6YABxExZ4SnKmUMNwHaFt?rs=1&pid=ImgDetMain" alt="">
+                </div>
+                <div class="description">
+                    <div class="description-title">
+                        <h3>
+                            Pamonha Online <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </h3>
+                    </div>
+                    <div class="description-text">
+                        <span>
+                            O game definitivo
+                        </span>
+                    </div>
+                </div>
+            </div>
+            */
+            myjson.abas[0].recursos[0].jogos.forEach((jogo) => {
+                smallCard = document.createElement("div")
+                smallCard.classList.add("small-card")
+                smallCard.innerHTML =
+                    `
+                   <div class="image-container">
+                        <img src="${jogo.imagem}" alt="">
+                    </div>
+                    <div class="description">
+                        <div class="description-title">
+                            <h3>
+                                ${jogo.titulo} <a href="${jogo.link}"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                            </h3>
+                        </div>
+                        <div class="description-text">
+                            <span>
+                                ${jogo.descricao}
+                            </span>
+                        </div>
+                    </div> 
+                `
+                cardsId.appendChild(smallCard)
+            })
+        }
+
+        loadJogos()
+
+        moduloOutside = document.getElementById("modulo-outside")
+        moduloJogos = document.getElementById("modulo-games")
+
+        jogos = document.getElementById("jogos")
+        jogos.addEventListener("click", () => {
+            moduloOutside.style.display = "flex"
+            moduloJogos.style.display = "flex"
+        })
+
+        fecharModalJogos = document.getElementById("fechar-modal-jogos")
+        fecharModalJogos.addEventListener("click", () => {
+            moduloOutside.style.display = "none"
+            moduloJogos.style.display = "none"
+        })
+
+        moduloVideos = document.getElementById("modulo-videos")
+        videosId = document.getElementById("videos-id")
+        videosId.innerHTML = "";
+
+        function loadVideos() {
+            myjson.abas[0].recursos[1].videos.forEach((video) => {
+                videosId.innerHTML += 
+                    `
+                   <li>
+                        <a href="${video.link}">
+                            ${video.titulo}
+                        </a>
+                        <span>(${video.autor}, ${video.ano}) [${video.duracao}]</span>
+                    </li>
+                `
+            })
+        }
+
+        loadVideos()
+
+        videos = document.getElementById("videos")
+        videos.addEventListener("click", () => {
+            moduloOutside.style.display = "flex"
+            moduloVideos.style.display = "flex"
+        })
+
+        fecharModalVideos = document.getElementById("fechar-modal-videos")
+        fecharModalVideos.addEventListener("click", () => {
+            moduloOutside.style.display = "none"
+            moduloVideos.style.display = "none"
+        })
+
+        moduloArtigos = document.getElementById("modulo-artigos")
+        artigosId = document.getElementById("artigos-id")
+        artigosId.innerHTML = "";
+
+        function loadArtigos() {
+            myjson.abas[0].recursos[2].artigos.forEach((artigo) => {
+                artigosId.innerHTML += 
+                    `
+                   <li>
+                        <a href="${artigo.link}">${artigo.titulo}</a>
+                        <span>(${artigo.autor}, ${artigo.ano}) [${artigo.paginas} pags.]</span>
+                    </li>
+                `
+            })
+        }
+
+        loadArtigos()
+
+        artigos = document.getElementById("artigos")
+        artigos.addEventListener("click", () => {
+            moduloOutside.style.display = "flex"
+            moduloArtigos.style.display = "flex"
+        })
+
+        fecharModalArtigos = document.getElementById("fechar-modal-artigos")
+        fecharModalArtigos.addEventListener("click", () => {
+            moduloOutside.style.display = "none"
+            moduloArtigos.style.display = "none"
+        })
+
+        recursosId = document.getElementById("recursos")
+
+        recursosTab = document.getElementById("suporte-tab")
+        suporteTab = document.getElementById("recursos-tab")
+
+        recursosTab.addEventListener("click", () => {
+            if(!recursosTab.classList.contains("selected")){
+                suporteTab.classList.remove("selected")
+                recursosTab.classList.add("selected")
+                suporte.style.display = "flex"
+                recursosId.style.display = "none"
+            }
+        })
+
+        suporteTab.addEventListener("click", () => {
+            if(!suporteTab.classList.contains("selected")) {
+                recursosTab.classList.remove("selected")
+                suporteTab.classList.add("selected")
+                suporte.style.display = "none"
+                recursosId.style.display = "flex"
+            }
+        })
+
         loadSuporte()
+
+        
     </script>
 </body>
 

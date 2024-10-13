@@ -114,17 +114,13 @@ body {
 .main-tab-header {
     padding: .625rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     border-bottom: 1px solid rgb(190, 190, 190);
 }
 
 .main-tab-header > span {
     text-align: center;
     text-transform: capitalize;
-}
-
-.main-tab-header > span:first-child {
-    border-right: 1px solid rgb(190, 190, 190);
 }
 
 .main-tab-header > span:last-child {
@@ -239,6 +235,51 @@ body {
     width: 95%;
 }
 
+.recursos {
+    display: flex;
+    flex-direction: column;
+    row-gap: .625rem;
+}
+
+.jogos, .videos, .artigos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.jogos > div, .videos > div, .artigos > div {
+    width: 10%;
+}
+
+.jogos > span, .videos > span, .artigos > span {
+    width: 90%;
+}
+
+.jogos > div, .videos > div, .artigos > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .312rem;
+    border-radius: 2px;
+}
+
+.jogos > div {
+    color: white;
+    background-color: rgb(41, 189, 78);
+}
+
+.videos > div {
+    color: white;
+    background-color: rgb(177, 135, 231);
+}
+
+.artigos > div {
+    color: white;
+    background-color: rgb(74, 84, 233);
+}
+
 .main-footer {
     background-color: white;
     height: 100%;
@@ -285,3 +326,114 @@ body {
 .bold {
     font-weight: 500;
 }
+
+.modulo-outside {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.modulo-container {
+    margin-top: 8.625rem;
+    background-color: white;
+    width: 80%;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .625rem;
+    border-radius: 4px;
+}
+
+.exit-bar {
+    background-color: rgb(136, 174, 255);
+    padding: 0 .312rem;
+    display: flex;
+    flex-direction: row-reverse;
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    font-weight: 500;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.modulo-title {
+    width: 92%;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin: 0 auto;
+    row-gap: 5px;
+}
+
+.small-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-radius: 4px;
+}
+
+.image-container > img {
+    width: 100%;
+    border-radius: 4px;
+    height: 70px;
+}
+
+
+.description {
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    padding: .625rem 0;
+    height: 100%;
+}
+
+.description-title > h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: rgb(236, 236, 236);
+    padding: .150rem 0;
+    padding-left: .625rem;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.description-title > h3 > a {
+    color: rgb(42, 82, 168);
+}
+
+.description-text {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.description-text > span {
+    font-size: 13px;
+    padding-left: .625rem;
+}
+
+.lista-videos, .lista-artigos {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.lista-videos > li:not(:last-child), .lista-artigos > li:not(:last-child) {
+    margin-bottom: .625rem;
+}
+
+.lista-videos > li > a, .lista-artigos > li > a {
+    color: rgb(42, 82, 168);
+    text-decoration: none;
+} 
