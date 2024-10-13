@@ -114,7 +114,7 @@ body {
 .cards {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 5px;
+    row-gap: 10px;
     column-gap: 5px;
 }
 
@@ -201,18 +201,18 @@ body {
 
 .image-container > img {
     width: 100%;
-    height: 100px;
+    height: 120px;
     object-fit:cover;
     margin-bottom: 5px;
 }
 
 .midia-social {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
-    padding: 5px;
+    padding: 2px;
     padding-left: 10px;
 }
 
@@ -224,7 +224,7 @@ body {
 }
 
 .midia-social > ul > li > a > i {
-    color: rgb(41, 41, 41);
+    color: rgb(226, 226, 226);
 }
 
 

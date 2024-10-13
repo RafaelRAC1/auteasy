@@ -33,13 +33,208 @@
                 <label for="">Local</label>
                 <select id="select-tipo" name="" id="">
                     <option value="Qualquer" default>Qualquer</option>
-                    <option value="Restaurante" default>Online</option>
-                    <option value="Lazer" default>Presencial</option>
+                    <option value="Online" default>Online</option>
+                    <option value="Presencial" default>Presencial</option>
                 </select>
             </div>
         </div>
         <div id="cards" class="cards">
-            <div class="card">
+        </div>
+    </article>
+    <footer class="main-footer">
+        <p>Projeto desenvolvido com o intuito de ajudar, meu!</p>
+        <span class="bold">3ºAN Ciência da Computação, Extensionista III</span>
+        <div class="instituicoes">
+            <div class="autores">
+                <p class="bold">Desenvolvido por:</p>
+                <ul>
+                    <li>Rafael Reis</li>
+                    <li>Nohan Brendon</li>
+                    <li>Rafael Calixto</li>
+                </ul>
+            </div>
+            <div class="mentores">
+                <span class="bold"> Mentoras:</span>
+                <ul>
+                    <li>Isabela Santos</li>
+                    <li>Fernanda Talhati</li>
+                </ul>
+            </div>
+            <img src="logo.png" alt="" srcset="">
+            <div class="mogi">
+                <img src="bandeira-mogi.jpg" alt="">
+                <div style="display:flex;flex-direction:column">
+                    <span>Cidade de</span>
+                    <span>Mogi das Cruzes</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const locais = {
+            "Comunidade": [
+                {
+                    "Online":
+                        [
+                            {
+                                "titulo": "APAE Mogi das Cruzes",
+                                "imagem": "https://th.bing.com/th/id/OIP.q9wDx6YABxExZ4SnKmUMNwHaFt?rs=1&pid=ImgDetMain",
+                                "descricao": "olha so, um restaurante mogiano!",
+                                "contato": {
+                                    "telefone": "99333-2221",
+                                    "site": "www.bing.com"
+                                },
+                                "plataformas": {
+                                    "whatsapp": "33333-3333",
+                                    "facebook": "LINK",
+                                    "email": "eu@vaicurintia.com"
+                                },
+                                "funcionamento": "Online",
+                                "endereco": "Online",
+                                "tipo": "ONG Online",
+                                "maps": "Online"
+                            }
+                        ]
+                },
+                {
+                    "Presencial":
+                        [
+                            {
+                                "titulo": "Lazer Mogiano",
+                                "imagem": "https://th.bing.com/th/id/OIP.q9wDx6YABxExZ4SnKmUMNwHaFt?rs=1&pid=ImgDetMain",
+                                "descricao": "olha so, um restaurante mogiano!",
+                                "contato": {
+                                    "telefone": "99333-2221",
+                                    "site": "www.bing.com"
+                                },
+                                "plataformas": {
+                                    "whatsapp": "33333-3333",
+                                    "facebook": "",
+                                    "email": "eu@vaicurintia.com"
+                                },
+                                "funcionamento": "seg - sex (8:00 - 15:00)",
+                                "endereco": "alguma avenida, 1111",
+                                "tipo": "ONG Local",
+                                "maps": "link-maps",
+                            }
+                        ]
+                }
+            ]
+        }
+
+        cards = document.getElementById("cards")
+
+        function loadLocais() {
+            locais.Comunidade.forEach((elemento) => {
+                Object.keys(elemento).forEach((key) => {
+                    elemento[key].forEach((local) => {
+                        cardDiv = document.createElement("div")
+                        cardDiv.classList.add("card")
+
+                        h2Card = document.createElement("h2")
+                        h2Card.innerText = local.titulo
+                        cardDiv.appendChild(h2Card)
+
+                        spanCard = document.createElement("span")
+                        spanCard.innerHTML =
+                            `
+                            <i class="fa fa-info-circle" aria-hidden="true"></i> ${local.tipo}
+                            `
+                        cardDiv.appendChild(spanCard)
+
+                        imgDiv = document.createElement("div")
+                        imgDiv.classList.add("image-container")
+                        img = document.createElement("img");
+                        img.src = local.imagem
+                        imgDiv.appendChild(img)
+
+                        socialMediaDiv = document.createElement("div")
+                        socialMediaDiv.classList.add("midia-social")
+                        socialMediaUl = document.createElement("ul")
+                        if (local.plataformas.whatsapp != "") {
+                            socialMediaUl.innerHTML +=
+                                `
+                                <li>
+                                    <a href="${local.plataformas.whatsapp}">
+                                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                `
+                        }
+                        if (local.plataformas.facebook != "") {
+                            socialMediaUl.innerHTML +=
+                                `
+                                <li>
+                                    <a href="${local.plataformas.facebook}">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                `
+                        }
+                        if (local.plataformas.email != "") {
+                            socialMediaUl.innerHTML +=
+                                `
+                                <li>
+                                    <a href="${local.plataformas.email}">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                `
+                        }
+                        socialMediaDiv.appendChild(socialMediaUl)
+                        imgDiv.appendChild(socialMediaDiv)
+                        cardDiv.appendChild(imgDiv)
+
+                        descriptionDiv = document.createElement("div")
+                        descriptionDiv.classList.add("description")
+                        descriptionP = document.createElement("p")
+                        descriptionP.innerText = local.descricao
+                        descriptionDiv.appendChild(descriptionP)
+
+                        descriptionUl = document.createElement("ul")
+                        descriptionUl.innerHTML =
+                            `
+                        <li>
+                            <span>Telefone:</span> ${local.contato.telefone}
+                        </li>
+                        <li>
+                            <span>Site:</span> <a href="">${local.contato.site} <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        </li>
+                        `
+                        if (local.endereco.toLowerCase() != "online" && local.endereco.toLowerCase() != "funcionamento") {
+                            descriptionUl.innerHTML +=
+                                `
+                        <li>
+                            <span>Funcionamento:</span> ${local.funcionamento}
+                        </li>
+                        <li>
+                            <span>Endereço:</span> ${local.endereco}
+                        </li>
+                        `
+                        }
+                        descriptionDiv.appendChild(descriptionUl)
+                        cardDiv.appendChild(descriptionDiv)
+
+                        if (key.toLocaleLowerCase() != "online") {
+                            buttonContainer = document.createElement("div")
+                            buttonContainer.classList.add("button-container")
+                            buttonContainer.innerHTML =
+                                `
+                                <a href="${local.maps}">
+                                    <button>Leve-me <i class="fa fa-car" aria-hidden="true"></i></button>
+                                </a>
+                                `
+                            cardDiv.appendChild(buttonContainer)
+                        }
+                        cards.appendChild(cardDiv)
+                    });
+                });
+            });
+        }
+
+        loadLocais()
+        /*
+        <div class="card">
                 <h2>APAE ONLINE</h2>
                 <span><i class="fa fa-info-circle" aria-hidden="true"></i> ONG Online</span>
                 <div class="image-container">
@@ -77,203 +272,16 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </article>
-    <footer class="main-footer">
-        <p>Projeto desenvolvido com o intuito de ajudar, meu!</p>
-        <span class="bold">3ºAN Ciência da Computação, Extensionista III</span>
-        <div class="instituicoes">
-            <div class="autores">
-                <p class="bold">Desenvolvido por:</p>
-                <ul>
-                    <li>Rafael Reis</li>
-                    <li>Nohan Brendon</li>
-                    <li>Rafael Calixto</li>
-                </ul>
-            </div>
-            <div class="mentores">
-                <span class="bold"> Mentoras:</span>
-                <ul>
-                    <li>Isabela Santos</li>
-                    <li>Fernanda Talhati</li>
-                </ul>
-            </div>
-            <img src="logo.png" alt="" srcset="">
-            <div class="mogi">
-                <img src="bandeira-mogi.jpg" alt="">
-                <div style="display:flex;flex-direction:column">
-                    <span>Cidade de</span>
-                    <span>Mogi das Cruzes</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-    restaurante, lazer, cultura, ensino
-    <script>
-        const locais = {
-            "Comunidade": [
-                {
-                    "Online":
-                        [
-                            {
-                                "titulo": "APAE Mogi das Cruzes",
-                                "tags": ["profissional", "adaptado", "calmo"],
-                                "imagem": "https://th.bing.com/th/id/OIP.q9wDx6YABxExZ4SnKmUMNwHaFt?rs=1&pid=ImgDetMain",
-                                "descricao": "olha so, um restaurante mogiano!",
-                                "contato": {
-                                    "telefone": "99333-2221",
-                                    "site": "www.bing.com"
-                                },
-                                "plataformas": {
-                                    "whatsapp": "33333-3333",
-                                    "facebook": "LINK",
-                                    "email": "eu@vaicurintia.com"
-                                },
-                                "endereco": "Online",
-                                "tipo":"ONG Online"
-                            }
-                        ]
-                },
-                {
-                    "Local":
-                        [
-                            {
-                                "titulo": "Lazer Mogiano",
-                                "tags": ["lazer", "adaptado", "calmo"],
-                                "imagem": "https://th.bing.com/th/id/OIP.q9wDx6YABxExZ4SnKmUMNwHaFt?rs=1&pid=ImgDetMain",
-                                "descricao": "olha so, um restaurante mogiano!",
-                                "contato": {
-                                    "telefone": "99333-2221",
-                                    "site": "www.bing.com"
-                                },
-                                "funcionamento": "seg - sex (8:00 - 15:00)",
-                                "endereco": "alguma avenida, 1111",
-                                "maps": "link-maps"
-                            }
-                        ]
-                }
-            ]
-        }
-
-        cards = document.getElementById("cards")
-
-        function loadLocais() {
-            locais.tipo.forEach((elemento) => {
-                Object.keys(elemento).forEach((key) => {
-                    elemento[key].forEach((local) => {
-                        cardDiv = document.createElement("div")
-                        cardDiv.classList.add("card")
-
-                        h2Card = document.createElement("h2")
-                        h2Card.innerText = local.titulo
-                        cardDiv.appendChild(h2Card)
-
-                        spanCard = document.createElement("span")
-                        spanCard.innerHTML =
-                            `
-                    <i class="fa fa-info-circle" aria-hidden="true"></i> ${key}
-                    `
-                        cardDiv.appendChild(spanCard)
-
-                        tagsDiv = document.createElement("div")
-                        tagsDiv.classList.add("tags")
-                        local.tags.forEach((tag) => {
-                            spanTag = document.createElement("span")
-                            spanTag.innerText = tag;
-                            tagsDiv.appendChild(spanTag)
-                        })
-                        cardDiv.appendChild(tagsDiv)
-
-                        img = document.createElement("img");
-                        img.src = local.imagem
-                        cardDiv.appendChild(img)
-
-                        descriptionDiv = document.createElement("div")
-                        descriptionDiv.classList.add("description")
-                        descriptionP = document.createElement("p")
-                        descriptionP.innerText = local.descricao
-                        descriptionDiv.appendChild(descriptionP)
-
-                        descriptionUl = document.createElement("ul")
-                        descriptionUl.innerHTML =
-                            `
-                        <li>
-                            <span>Telefone:</span> ${local.contato.telefone}
-                        </li>
-                        <li>
-                            <span>Funcionamento:</span> ${local.funcionamento}
-                        </li>
-                        <li>
-                            <span>Site:</span> ${local.contato.site}
-                        </li>
-                        <li>
-                            <span>Endereço:</span> ${local.endereco}
-                        </li>
-                    `
-                        descriptionDiv.appendChild(descriptionUl)
-                        cardDiv.appendChild(descriptionDiv)
-
-                        buttonContainer = document.createElement("div")
-                        buttonContainer.classList.add("button-container")
-                        buttonContainer.innerHTML =
-                            `
-                    <a href="${local.maps}">
-                        <button>Leve-me <i class="fa fa-car" aria-hidden="true"></i></button>
-                    </a>
-                    `
-                        cardDiv.appendChild(buttonContainer)
-                        cards.appendChild(cardDiv)
-                    });
-                });
-            });
-        }
-
-        loadLocais()
-        /*
-        <div class="card">
-                <h2>TITULO ESTABELECIMENTO</h2>
-                <span><i class="fa fa-info-circle" aria-hidden="true"></i> tipo de estabelecimento</span>
-                <div class="tags">
-                    <span>lazer</span>
-                    <span>diversão</span>
-                    <span>calmo</span>
-                    <span>adaptado</span>
-                </div>
-                <img src="https://th.bing.com/th/id/OIP.AnOD3O01ip6odDpRlksFCgAAAA?rs=1&pid=ImgDetMain" alt="">
-                <div class="description">
-                    <p>
-                        Descricao do site, mete um lore ip[sum daqueles brabo mesmo, sabe?
-                    </p>
-                    <ul>
-                        <li>
-                            <span>Telefone:</span> 99999-9999
-                        </li>
-                        <li>
-                            <span>Funcionamento:</span> Seg - Sex (8:00 - 15:00)
-                        </li>
-                        <li>
-                            <span>Site:</span> www.google.com
-                        </li>
-                        <li>
-                            <span>Endereço:</span> avenida palpaia, 42
-                        </li>
-                    </ul>
-                </div>
-                <div class="button-container">
-                    <button>Leve-me <i class="fa fa-car" aria-hidden="true"></i></button>
-                </div>
-            </div>
         */
 
         encontrou = 0;
         selectTipo = document.getElementById("select-tipo")
         selectTipo.addEventListener("change", () => {
-            console.log()
             if (selectTipo.value.toLowerCase() == "qualquer") {
                 cards.innerHTML = ""
                 loadLocais()
             }
-            locais.tipo.forEach((elemento) => {
+            locais.Comunidade.forEach((elemento) => {
                 Object.keys(elemento).forEach((key) => {
                     if (key.toLowerCase() == selectTipo.value.toLowerCase()) {
                         cards.innerHTML = ""
@@ -288,22 +296,52 @@
                             spanCard = document.createElement("span")
                             spanCard.innerHTML =
                                 `
-                    <i class="fa fa-info-circle" aria-hidden="true"></i> ${key}
-                    `
+                            <i class="fa fa-info-circle" aria-hidden="true"></i> ${local.tipo}
+                            `
                             cardDiv.appendChild(spanCard)
 
-                            tagsDiv = document.createElement("div")
-                            tagsDiv.classList.add("tags")
-                            local.tags.forEach((tag) => {
-                                spanTag = document.createElement("span")
-                                spanTag.innerText = tag;
-                                tagsDiv.appendChild(spanTag)
-                            })
-                            cardDiv.appendChild(tagsDiv)
-
+                            imgDiv = document.createElement("div")
+                            imgDiv.classList.add("image-container")
                             img = document.createElement("img");
                             img.src = local.imagem
-                            cardDiv.appendChild(img)
+                            imgDiv.appendChild(img)
+
+                            socialMediaDiv = document.createElement("div")
+                            socialMediaDiv.classList.add("midia-social")
+                            socialMediaUl = document.createElement("ul")
+                            if (local.plataformas.whatsapp != "") {
+                                socialMediaUl.innerHTML +=
+                                    `
+                                <li>
+                                    <a href="${local.plataformas.whatsapp}">
+                                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                `
+                            }
+                            if (local.plataformas.facebook != "") {
+                                socialMediaUl.innerHTML +=
+                                    `
+                                <li>
+                                    <a href="${local.plataformas.facebook}">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                `
+                            }
+                            if (local.plataformas.email != "") {
+                                socialMediaUl.innerHTML +=
+                                    `
+                                <li>
+                                    <a href="${local.plataformas.email}">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                `
+                            }
+                            socialMediaDiv.appendChild(socialMediaUl)
+                            imgDiv.appendChild(socialMediaDiv)
+                            cardDiv.appendChild(imgDiv)
 
                             descriptionDiv = document.createElement("div")
                             descriptionDiv.classList.add("description")
@@ -314,31 +352,38 @@
                             descriptionUl = document.createElement("ul")
                             descriptionUl.innerHTML =
                                 `
-                        <li>
-                            <span>Telefone:</span> ${local.contato.telefone}
-                        </li>
-                        <li>
-                            <span>Funcionamento:</span> ${local.funcionamento}
-                        </li>
-                        <li>
-                            <span>Site:</span> ${local.contato.site}
-                        </li>
-                        <li>
-                            <span>Endereço:</span> ${local.endereco}
-                        </li>
-                    `
+                                <li>
+                                    <span>Telefone:</span> ${local.contato.telefone}
+                                </li>
+                                <li>
+                                    <span>Site:</span> <a href="">${local.contato.site} <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                </li>
+                                `
+                            if (local.endereco.toLowerCase() != "online" && local.endereco.toLowerCase() != "funcionamento") {
+                                descriptionUl.innerHTML +=
+                                    `
+                                    <li>
+                                        <span>Funcionamento:</span> ${local.funcionamento}
+                                    </li>
+                                    <li>
+                                        <span>Endereço:</span> ${local.endereco}
+                                    </li>
+                                    `
+                            }
                             descriptionDiv.appendChild(descriptionUl)
                             cardDiv.appendChild(descriptionDiv)
 
-                            buttonContainer = document.createElement("div")
-                            buttonContainer.classList.add("button-container")
-                            buttonContainer.innerHTML =
+                            if (key.toLocaleLowerCase() != "online") {
+                                buttonContainer = document.createElement("div")
+                                buttonContainer.classList.add("button-container")
+                                buttonContainer.innerHTML =
+                                    `
+                                <a href="${local.maps}">
+                                    <button>Leve-me <i class="fa fa-car" aria-hidden="true"></i></button>
+                                </a>
                                 `
-                    <a href="${local.maps}">
-                        <button>Leve-me <i class="fa fa-car" aria-hidden="true"></i></button>
-                    </a>
-                    `
-                            cardDiv.appendChild(buttonContainer)
+                                cardDiv.appendChild(buttonContainer)
+                            }
                             cards.appendChild(cardDiv)
                             encontrou = 1
                         })
@@ -351,6 +396,7 @@
                 encontrou = 0
             }
         })
+
     </script>
 </body>
 
