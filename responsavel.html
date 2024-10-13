@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./responsavel-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Auteasy</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <span>Auteasy</span>
+                <img src="autism.png" alt="" srcset="">
+            </div>
+        </div>
+        <div class="header-tabs">
+            <a class="tab">inicio</a>
+            <a class="tab">amb.</a>
+            <a class="tab">comun.</a>
+            <a class="tab">respon.</a>
+        </div>
+    </header>
+    <article class="main-article">
+        <div class="main-article-title">
+            <h1 id="ma-title">PARA RESPONSÁVEIS</h1>
+        </div>
+        <div class="main-tab">
+            <div class="main-tab-content">
+                <div class="main-tab-header">
+                    <span class="selected">suporte</span>
+                    <span>recursos</span>
+                    <span>contato</span>
+                </div>
+                <div class="main-tab-body">
+                    <div id="suporte" class="suporte">
+                        <div class="suporte-linha">
+                            <div class="questao">
+                                <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                <span>O que é Transtorno de Espectro Autista (TEA)?</span>
+                            </div>
+                            <div class="resposta hidden">
+                                <div class="resposta-content">
+                                    <span>Resposta da pergunta 1 para o projeto</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="suporte-linha">
+                            <div class="questao">
+                                <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                <span>O que é Transtorno de Espectro Autista (TEA)?</span>
+                            </div>
+                            <div class="resposta hidden">
+                                <div class="resposta-content">
+                                    <span>Resposta da pergunta 1 para o projeto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="main-footer">
+        <p>Projeto desenvolvido com o intuito de ajudar, meu!</p>
+        <span class="bold">3ºAN Ciência da Computação, Extensionista III</span>
+        <div class="instituicoes">
+            <div class="autores">
+                <p class="bold">Desenvolvido por:</p>
+                <ul>
+                    <li>Rafael Reis</li>
+                    <li>Nohan Brendon</li>
+                    <li>Rafael Calixto</li>
+                </ul>
+            </div>
+            <div class="mentores">
+                <span class="bold"> Mentoras:</span>
+                <ul>
+                    <li>Isabela Santos</li>
+                    <li>Fernanda Talhati</li>
+                </ul>
+            </div>
+            <img src="logo.png" alt="" srcset="">
+            <div class="mogi">
+                <img src="bandeira-mogi.jpg" alt="">
+                <div style="display:flex;flex-direction:column">
+                    <span>Cidade de</span>
+                    <span>Mogi das Cruzes</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const myjson =
+        {
+            abas: [
+                { "recursos": "" },
+                {
+                    "suporte":
+                        [
+                            {
+                                "pergunta": "Como ajudar pessoas?",
+                                "resposta": "Proatividade, eu acho."
+                            }
+                        ]
+                },
+                { "contato": "" }
+            ]
+        }
+
+        function clickQuestaoEvent(element){
+            element.addEventListener("click", (event) => {
+                if (event.target.tagName != "DIV") {
+                    questaoParent = event.target.parentElement.parentElement
+                    if (questaoParent.children[1].classList.contains("hidden")) {
+                        questaoParent.children[1].classList.remove("hidden")
+                        questaoParent.children[1].classList.add("fadein")
+                        questaoParent.children[0].children[0].classList.remove("unselected")
+                        questaoParent.children[0].children[0].classList.add("selected-question")
+                    } else {
+                        questaoParent.children[1].classList.add("hidden")
+                        questaoParent.children[0].children[0].classList.remove("selected-question")
+                        questaoParent.children[0].children[0].classList.add("unselected")
+                    }
+                }
+            })
+        }
+
+        questao = document.getElementsByClassName("questao")
+        for (i = 0; i < questao.length; i++) {
+            clickQuestaoEvent(questao[i])
+        }
+
+        const suporte = document.getElementById("suporte")
+
+        function loadSuporte() {
+            myjson.abas[1].suporte.forEach((e) => {
+                /*
+                <div class="suporte-linha">
+                    <div class="questao">
+                        <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                        <span>O que é Transtorno de Espectro Autista (TEA)?</span>
+                    </div>
+                    <div class="resposta hidden">
+                        <div class="resposta-content">
+                            <span>Resposta da pergunta 1 para o projeto</span>
+                        </div>
+                    </div>
+                 </div>
+                */
+                suporteLinhaDiv = document.createElement("div")
+                suporteLinhaDiv.classList.add("suporte-linha")
+
+                questaoDiv = document.createElement("div")
+                questaoDiv.classList.add("questao")
+                questaoDiv.innerHTML = 
+                `
+                    <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                    <span>${e.pergunta}</span>
+                `
+                suporteLinhaDiv.appendChild(questaoDiv)
+                
+                respostaDiv = document.createElement("div")
+                respostaDiv.classList.add("resposta")
+                respostaDiv.classList.add("hidden")
+                respostaDiv.innerHTML = 
+                `
+                    <div class="resposta-content">
+                        <span>${e.resposta}</span>
+                    </div>
+                `
+                suporteLinhaDiv.appendChild(respostaDiv)
+
+                suporte.appendChild(suporteLinhaDiv)
+
+                clickQuestaoEvent(suporteLinhaDiv)
+            })
+        }
+
+        loadSuporte()
+    </script>
+</body>
+
+</html>
+
+<!-- 
+
+<a href="https://br.freepik.com/vetores-gratis/campanha-da-fita-do-autismo_136484277.htm#query=la%C3%A7o%20autismo%20png&position=1&from_view=keyword&track=ais_hybrid&uuid=b0965353-9a4d-4f08-96e3-6a59c3a2394d">Imagem de studiogstock</a> no Freepik 
+ 
+Imagem de studiogstock no Freepik
+
+-->
