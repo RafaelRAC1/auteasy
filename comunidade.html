@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./comunidade-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Auteasy</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <span>Auteasy</span>
+                <img src="autism.png" alt="" srcset="">
+            </div>
+        </div>
+        <div class="header-tabs">
+            <a class="tab">inicio</a>
+            <a class="tab">amb.</a>
+            <a class="tab">comun.</a>
+            <a class="tab">respon.</a>
+        </div>
+    </header>
+    <article class="main-article">
+        <div class="main-article-title">
+            <h1 id="ma-title">COMUNIDADES EM MOGI</h1>
+        </div>
+        <div class="filters">
+            <div class="select-field">
+                <label for="">Local</label>
+                <select id="select-tipo" name="" id="">
+                    <option value="Qualquer" default>Qualquer</option>
+                    <option value="Restaurante" default>Online</option>
+                    <option value="Lazer" default>Presencial</option>
+                </select>
+            </div>
+        </div>
+        <div id="cards" class="cards">
+            <div class="card">
+                <h2>APAE ONLINE</h2>
+                <span><i class="fa fa-info-circle" aria-hidden="true"></i> ONG Online</span>
+                <div class="image-container">
+                    <img src="https://th.bing.com/th/id/OIP.AnOD3O01ip6odDpRlksFCgAAAA?rs=1&pid=ImgDetMain" alt="">
+                    <div class="midia-social">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                </a>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>
+                        Descricao do site, mete um lore ip[sum daqueles brabo mesmo, sabe?
+                    </p>
+                    <ul>
+                        <li>
+                            <span>Telefone:</span> 99999-9999
+                        </li>
+                        <li>
+                            <span>Site:</span> www.google.com <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="main-footer">
+        <p>Projeto desenvolvido com o intuito de ajudar, meu!</p>
+        <span class="bold">3ºAN Ciência da Computação, Extensionista III</span>
+        <div class="instituicoes">
+            <div class="autores">
+                <p class="bold">Desenvolvido por:</p>
+                <ul>
+                    <li>Rafael Reis</li>
+                    <li>Nohan Brendon</li>
+                    <li>Rafael Calixto</li>
+                </ul>
+            </div>
+            <div class="mentores">
+                <span class="bold"> Mentoras:</span>
+                <ul>
+                    <li>Isabela Santos</li>
+                    <li>Fernanda Talhati</li>
+                </ul>
+            </div>
+            <img src="logo.png" alt="" srcset="">
+            <div class="mogi">
+                <img src="bandeira-mogi.jpg" alt="">
+                <div style="display:flex;flex-direction:column">
+                    <span>Cidade de</span>
+                    <span>Mogi das Cruzes</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    restaurante, lazer, cultura, ensino
+    <script>
+        const locais = {
+            "Comunidade": [
+                {
+                    "Online":
+                        [
+                            {
+                                "titulo": "APAE Mogi das Cruzes",
+                                "tags": ["profissional", "adaptado", "calmo"],
+                                "imagem": "https://th.bing.com/th/id/OIP.q9wDx6YABxExZ4SnKmUMNwHaFt?rs=1&pid=ImgDetMain",
+                                "descricao": "olha so, um restaurante mogiano!",
+                                "contato": {
+                                    "telefone": "99333-2221",
+                                    "site": "www.bing.com"
+                                },
+                                "plataformas": {
+                                    "whatsapp": "33333-3333",
+                                    "facebook": "LINK",
+                                    "email": "eu@vaicurintia.com"
+                                },
+                                "endereco": "Online",
+                                "tipo":"ONG Online"
+                            }
+                        ]
+                },
+                {
+                    "Local":
+                        [
+                            {
+                                "titulo": "Lazer Mogiano",
+                                "tags": ["lazer", "adaptado", "calmo"],
+                                "imagem": "https://th.bing.com/th/id/OIP.q9wDx6YABxExZ4SnKmUMNwHaFt?rs=1&pid=ImgDetMain",
+                                "descricao": "olha so, um restaurante mogiano!",
+                                "contato": {
+                                    "telefone": "99333-2221",
+                                    "site": "www.bing.com"
+                                },
+                                "funcionamento": "seg - sex (8:00 - 15:00)",
+                                "endereco": "alguma avenida, 1111",
+                                "maps": "link-maps"
+                            }
+                        ]
+                }
+            ]
+        }
+
+        cards = document.getElementById("cards")
+
+        function loadLocais() {
+            locais.tipo.forEach((elemento) => {
+                Object.keys(elemento).forEach((key) => {
+                    elemento[key].forEach((local) => {
+                        cardDiv = document.createElement("div")
+                        cardDiv.classList.add("card")
+
+                        h2Card = document.createElement("h2")
+                        h2Card.innerText = local.titulo
+                        cardDiv.appendChild(h2Card)
+
+                        spanCard = document.createElement("span")
+                        spanCard.innerHTML =
+                            `
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> ${key}
+                    `
+                        cardDiv.appendChild(spanCard)
+
+                        tagsDiv = document.createElement("div")
+                        tagsDiv.classList.add("tags")
+                        local.tags.forEach((tag) => {
+                            spanTag = document.createElement("span")
+                            spanTag.innerText = tag;
+                            tagsDiv.appendChild(spanTag)
+                        })
+                        cardDiv.appendChild(tagsDiv)
+
+                        img = document.createElement("img");
+                        img.src = local.imagem
+                        cardDiv.appendChild(img)
+
+                        descriptionDiv = document.createElement("div")
+                        descriptionDiv.classList.add("description")
+                        descriptionP = document.createElement("p")
+                        descriptionP.innerText = local.descricao
+                        descriptionDiv.appendChild(descriptionP)
+
+                        descriptionUl = document.createElement("ul")
+                        descriptionUl.innerHTML =
+                            `
+                        <li>
+                            <span>Telefone:</span> ${local.contato.telefone}
+                        </li>
+                        <li>
+                            <span>Funcionamento:</span> ${local.funcionamento}
+                        </li>
+                        <li>
+                            <span>Site:</span> ${local.contato.site}
+                        </li>
+                        <li>
+                            <span>Endereço:</span> ${local.endereco}
+                        </li>
+                    `
+                        descriptionDiv.appendChild(descriptionUl)
+                        cardDiv.appendChild(descriptionDiv)
+
+                        buttonContainer = document.createElement("div")
+                        buttonContainer.classList.add("button-container")
+                        buttonContainer.innerHTML =
+                            `
+                    <a href="${local.maps}">
+                        <button>Leve-me <i class="fa fa-car" aria-hidden="true"></i></button>
+                    </a>
+                    `
+                        cardDiv.appendChild(buttonContainer)
+                        cards.appendChild(cardDiv)
+                    });
+                });
+            });
+        }
+
+        loadLocais()
+        /*
+        <div class="card">
+                <h2>TITULO ESTABELECIMENTO</h2>
+                <span><i class="fa fa-info-circle" aria-hidden="true"></i> tipo de estabelecimento</span>
+                <div class="tags">
+                    <span>lazer</span>
+                    <span>diversão</span>
+                    <span>calmo</span>
+                    <span>adaptado</span>
+                </div>
+                <img src="https://th.bing.com/th/id/OIP.AnOD3O01ip6odDpRlksFCgAAAA?rs=1&pid=ImgDetMain" alt="">
+                <div class="description">
+                    <p>
+                        Descricao do site, mete um lore ip[sum daqueles brabo mesmo, sabe?
+                    </p>
+                    <ul>
+                        <li>
+                            <span>Telefone:</span> 99999-9999
+                        </li>
+                        <li>
+                            <span>Funcionamento:</span> Seg - Sex (8:00 - 15:00)
+                        </li>
+                        <li>
+                            <span>Site:</span> www.google.com
+                        </li>
+                        <li>
+                            <span>Endereço:</span> avenida palpaia, 42
+                        </li>
+                    </ul>
+                </div>
+                <div class="button-container">
+                    <button>Leve-me <i class="fa fa-car" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        */
+
+        encontrou = 0;
+        selectTipo = document.getElementById("select-tipo")
+        selectTipo.addEventListener("change", () => {
+            console.log()
+            if (selectTipo.value.toLowerCase() == "qualquer") {
+                cards.innerHTML = ""
+                loadLocais()
+            }
+            locais.tipo.forEach((elemento) => {
+                Object.keys(elemento).forEach((key) => {
+                    if (key.toLowerCase() == selectTipo.value.toLowerCase()) {
+                        cards.innerHTML = ""
+                        elemento[key].forEach((local) => {
+                            cardDiv = document.createElement("div")
+                            cardDiv.classList.add("card")
+
+                            h2Card = document.createElement("h2")
+                            h2Card.innerText = local.titulo
+                            cardDiv.appendChild(h2Card)
+
+                            spanCard = document.createElement("span")
+                            spanCard.innerHTML =
+                                `
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> ${key}
+                    `
+                            cardDiv.appendChild(spanCard)
+
+                            tagsDiv = document.createElement("div")
+                            tagsDiv.classList.add("tags")
+                            local.tags.forEach((tag) => {
+                                spanTag = document.createElement("span")
+                                spanTag.innerText = tag;
+                                tagsDiv.appendChild(spanTag)
+                            })
+                            cardDiv.appendChild(tagsDiv)
+
+                            img = document.createElement("img");
+                            img.src = local.imagem
+                            cardDiv.appendChild(img)
+
+                            descriptionDiv = document.createElement("div")
+                            descriptionDiv.classList.add("description")
+                            descriptionP = document.createElement("p")
+                            descriptionP.innerText = local.descricao
+                            descriptionDiv.appendChild(descriptionP)
+
+                            descriptionUl = document.createElement("ul")
+                            descriptionUl.innerHTML =
+                                `
+                        <li>
+                            <span>Telefone:</span> ${local.contato.telefone}
+                        </li>
+                        <li>
+                            <span>Funcionamento:</span> ${local.funcionamento}
+                        </li>
+                        <li>
+                            <span>Site:</span> ${local.contato.site}
+                        </li>
+                        <li>
+                            <span>Endereço:</span> ${local.endereco}
+                        </li>
+                    `
+                            descriptionDiv.appendChild(descriptionUl)
+                            cardDiv.appendChild(descriptionDiv)
+
+                            buttonContainer = document.createElement("div")
+                            buttonContainer.classList.add("button-container")
+                            buttonContainer.innerHTML =
+                                `
+                    <a href="${local.maps}">
+                        <button>Leve-me <i class="fa fa-car" aria-hidden="true"></i></button>
+                    </a>
+                    `
+                            cardDiv.appendChild(buttonContainer)
+                            cards.appendChild(cardDiv)
+                            encontrou = 1
+                        })
+                    }
+                })
+            })
+            if (encontrou != 1 && selectTipo.value.toLowerCase() != "qualquer") {
+                alert("Não existem locais deste tipo.")
+            } else {
+                encontrou = 0
+            }
+        })
+    </script>
+</body>
+
+</html>
+
+<!-- 
+
+<a href="https://br.freepik.com/vetores-gratis/campanha-da-fita-do-autismo_136484277.htm#query=la%C3%A7o%20autismo%20png&position=1&from_view=keyword&track=ais_hybrid&uuid=b0965353-9a4d-4f08-96e3-6a59c3a2394d">Imagem de studiogstock</a> no Freepik 
+ 
+Imagem de studiogstock no Freepik
+
+-->
