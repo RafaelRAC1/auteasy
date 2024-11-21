@@ -1,0 +1,172 @@
+{
+    "tipo": [
+        {
+            "Restaurante": [
+                {
+                    "titulo": "O Berro",
+                    "tags": [
+                        "Acolhedor",
+                        "Comida Brasileira",
+                        "Atencioso"
+                    ],
+                    "imagem": "https://restauranteoberro.com.br/wp-content/uploads/2022/12/Prancheta-4.png",
+                    "descricao": "Com quase meio século de tradição, O Berro oferece comida caseira de alta qualidade e momentos inesquecíveis, tudo isso a poucos passos de distância.",
+                    "contato": {
+                        "telefone": "(11) 4798-1971",
+                        "site": "restauranteoberro.com.br"
+                    },
+                    "funcionamento": "Domingo 11:30 - 17:00; Seg a Qua 11:00 - 22:00; Sex 11:00 - 23:00; Sab 07:00 - 23:00",
+                    "endereco": "Rua Maj. Pinheiro Franco 328, Mogi das Cruzes, SP, 08710-220.",
+                    "maps": "https://www.bing.com/maps?osid=cd3d1c66-e8e3-4881-be3b-ffaedfdcf130&cp=-23.520375~-46.200364&lvl=16&pi=0&imgid=78b6c71c-a68b-41cf-b5fe-4ce8c6d43198&v=2&sV=2&form=S00027"
+                }
+            ]
+        },
+        {
+            "Lazer": [
+                {
+                    "titulo": "Recanto Mac",
+                    "tags": [
+                        "Paz",
+                        "Alegre",
+                        "Calmo"
+                    ],
+                    "imagem": "https://scontent.fgru6-1.fna.fbcdn.net/v/t1.6435-9/66282234_838435576541911_1661021495842832384_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHcGqs-prRguOab9rMA_6PJh2qzPzKpEgOHarM_MqkSAyb8YcV4sFK6vHVWyz4epliOC4-4WSBPdXjy3clpn2E5&_nc_ohc=u0JL_aix2jQQ7kNvgFk-buq&_nc_ht=scontent.fgru6-1.fna&_nc_gid=AbUB9sHFbGUx_t0rIMIafyI&oh=00_AYDwzRi2ULs99pJ4PeCV_wERXQMDhIYaKQclbHLDK6PT2w&oe=673A52DB",
+                    "descricao": "No Recanto Mac, você encontra mais do que um simples destino de lazer – é onde os sorrisos são genuínos e as memórias são criadas. Aqui, é o seu refúgio perfeito para momentos de alegria e conexão com a família em meio à beleza natural do Alto Tietê.",
+                    "contato": {
+                        "telefone": "(11) 94792-0366",
+                        "site": "recantomac.com.brm"
+                    },
+                    "funcionamento": "Aberto apenas aos sábados e domingos, das 10:45 às 16:30. Fechado nos demais dias.",
+                    "endereco": "Via Tokuda, 326 - Meu Sossego, Suzano - SP, 08700-000s",
+                    "maps": "https://www.google.com/maps/place/Via+Tokuda,+326+-+Boa+Vista+Paulista,+Suzano+-+SP/@-23.5150918,-46.2723822,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce79946081490b:0x55b65c47fefb0d3a!8m2!3d-23.5150918!4d-46.2698019?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                },
+                {
+                    "titulo": "Cinema Cinemark - Mogi Shopping",
+                    "tags": [
+                        "Cinema",
+                        "Comodidade",
+                        "Calmo"
+                    ],
+                    "imagem": "https://vipzinho.com.br/wp-content/uploads/2024/06/cinemark-cinemas-750x465.jpeg",
+                    "descricao": "Cinema que tem seções adaptadas com luminosidade baixa para não ocorrer tantas atividades sensorias para o autista.",
+                    "contato": {
+                        "telefone": "Sem.",
+                        "site": "www.cinemark.com.br"
+                    },
+                    "funcionamento": "Segunda-feira a domingo, das 11h às 23h.",
+                    "endereco": "Av. Ver. Narciso Yague Guimarães, 1001 - Jardim Armenia, Mogi das Cruzes - SP, 08780-910",
+                    "maps": "https://www.google.com/maps/place/Cinema+Cinemark+-+Mogi+Shopping/@-23.51595,-46.1795747,17z/data=!3m1!4b1!4m6!3m5!1s0x94cdd830d072a0c1:0x965b0ed93c38d1e9!8m2!3d-23.51595!4d-46.1795747!16s%2Fg%2F1v8y546v?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                },
+                {
+                    "titulo": "Parque Centenário da Imigração Japonesa",
+                    "tags": [
+                        "Natureza",
+                        "Família",
+                        "Verde"
+                    ],
+                    "imagem": "https://www.mogidascruzes.sp.gov.br/public/site/imagens/6/2021052413330460abd540cede6.jpg",
+                    "descricao": "Com 215 mil metros de área, o parque conta com quatro lagos com pontes flutuantes e um museu que retrata a história dos imigrantes japoneses, com vários objetos dos imigrantes doados ao museu. O parque está inserido na Área de Proteção Ambiental da Várzea do Rio Tietê.",
+                    "contato": {
+                        "telefone": "(11) 4739-2345",
+                        "site": "www.mogidascruzes.sp.gov.br/unidade-e-equipamento/0/parque-centenario-da-imigracao-japonesa"
+                    },
+                    "funcionamento": "Segunda-feira a domingo, das 8h às 18h.",
+                    "endereco": "Av. Francisco Rodrigues Filho, s/n - Cezar de Souza, Mogi das Cruzes - SP, 08773-380",
+                    "maps": "https://www.google.com/maps?cid=337837045364259307"
+                }
+            ]
+        },
+        {
+            "Cultura": [
+                {
+                    "titulo": "APAE Mogi das Cruzes",
+                    "tags": [
+                        "Inclusão",
+                        "Expressão",
+                        "Arte"
+                    ],
+                    "imagem": "https://cdn.diariodesuzano.com.br/img/pc/780/530/dn_noticia/2019/06/apae-mogi-das-cruzes_1.jpg",
+                    "descricao": "A APAE de Mogi das Cruzes convida para a Oficina de Artes Visuais, um espaço para explorar a criatividade e desenvolver habilidades através da pintura, desenho e outras técnicas artísticas. A atividade é adaptada às necessidades de pessoas com autismo e proporciona um ambiente seguro e estimulante.",
+                    "contato": {
+                        "telefone": "(11) 4728-4999",
+                        "site": "apaemc.org.br"
+                    },
+                    "funcionamento": "Todas as quartas-feiras, das 14h às 16h.",
+                    "endereco": "Rua Carmem Mouras Santos, 134 - Jardim Bethânia, Mogi das Cruzes",
+                    "maps": "https://www.google.com/maps/place/R.+Carmem+de+Moura+Santos,+134+-+Jardim+Betania,+Mogi+das+Cruzes+-+SP,+08717-830/data=!4m2!3m1!1s0x94cdd86ca71eed3d:0x9429795074c7a54e?sa=X&ved=1t:242&ictx=111"
+                },
+                {
+                    "titulo": "SESC Mogi das Cruzes",
+                    "tags": [
+                        "Esportes",
+                        "Bem-estar",
+                        "Eventos"
+                    ],
+                    "imagem": "https://www.sescsp.org.br/wp-content/uploads/2023/12/IMG_7441-2.jpg",
+                    "descricao": "O SESC Mogi das Cruzes é um centro de referência em cultura, lazer e bem-estar, oferecendo uma ampla variedade de atividades para todas as idades. Com uma programação diversificada, o SESC proporciona momentos de lazer, aprendizado e desenvolvimento pessoal para toda a família.",
+                    "contato": {
+                        "telefone": "(11) 4728-6200",
+                        "site": "www.sescsp.org.br/unidades/mogi-das-cruzes"
+                    },
+                    "funcionamento": "Aberto de terça a domingo, com horários variados: sextas e terças a quintas das 13:00 às 21:30, e sábados e domingos das 09:00 às 17:30. Fechado às segundas.",
+                    "endereco": "R. Rogerio Tacola, 118 - Socorro - Mogi das Cruzes/São Paulo - 08780-720",
+                    "maps": "https://www.google.com/maps/place/Sesc+Mogi+das+Cruzes/@-23.5159999,-46.17584,15z/data=!4m2!3m1!1s0x0:0xb24abee1b33106c3?sa=X&ved=1t:2428&ictx=111"
+                },
+                {
+                    "titulo": "Biblioteca Municipal Benedito Sérvulo de Sant'Anna",
+                    "tags": [
+                        "Conhecimento",
+                        "Leitura",
+                        "Inclusão"
+                    ],
+                    "imagem": "https://static6.odiariodemogi.net.br/wp-content/uploads/2024/03/202306011655346478f7b6a1489.jpg",
+                    "descricao": "A Biblioteca Municipal Benedito Sérvulo de Sant'Anna é um espaço cultural que oferece um acervo diversificado de livros, além de promover atividades de leitura, oficinas e eventos para todas as idades. Com um ambiente acolhedor e inclusivo, a biblioteca oferece programas especiais para pessoas com autismo, como oficinas de leitura adaptadas e espaços tranquilos para atividades individuais.",
+                    "contato": {
+                        "telefone": "Segunda a sábado, das 9h às 17h.",
+                        "site": "www.comphap.pmmc.com.br/pages/biblioteca_municipal.html"
+                    },
+                    "funcionamento": "Aberto de terça a domingo, com horários variados: sextas e terças a quintas das 13:00 às 21:30, e sábados e domingos das 09:00 às 17:30. Fechado às segundas.",
+                    "endereco": "Praça Mons. Roque Pinto de Barros, 360 (Piso térreo) - Centro. CEP: 08710-180",
+                    "maps": "https://www.google.com/maps/place/Centro+Cultural+de+Mogi+das+Cruzes/@-23.5228835,-46.191858,15z/data=!4m2!3m1!1s0x0:0xc17bb5675c5ca0e9?sa=X&ved=1t:2428&ictx=111"
+                }
+            ]
+        },
+        {
+            "Ensino": [
+                {
+                    "titulo": "Clínica de Grão em Grão",
+                    "tags": [
+                        "Neurodesenvolvimento",
+                        "Terapia Ocupacional"
+                    ],
+                    "imagem": "https://cdn.discordapp.com/attachments/1169635156118749234/1296987840693010523/image.png?ex=6714498e&is=6712f80e&hm=5fcc9a5fe9ddcdf7e339cb78a71796db9a097ff5899556b8664f8857b8f159ea&",
+                    "descricao": "A Clínica de Grão em Grão é uma clínica especializada em neurodesenvolvimento que oferece atendimento individualizado para crianças e adolescentes com TEA. A equipe multidisciplinar da clínica utiliza abordagens terapêuticas como a ABA e a terapia ocupacional para promover o desenvolvimento das habilidades sociais, cognitivas e motoras das crianças.",
+                    "contato": {
+                        "telefone": "(11) 4798-6986",
+                        "site": "clinicadegraoemgrao.com.br"
+                    },
+                    "funcionamento": "Segunda a sexta-feira, das 8h às 18h.",
+                    "endereco": "Rua Francisco Franco, 164 - Sala 7 - Centro, Mogi das Cruzes - SP, 08710-510",
+                    "maps": "https://maps.google.com/?cid=18206456582366039681"
+                },
+                {
+                    "titulo": "EMESP Jovita Franco Arouche",
+                    "tags": [
+                        "Educação Especial",
+                        "Neurodesenvolvimento",
+                        "Educação Municipal"
+                    ],
+                    "imagem": "https://cdn.discordapp.com/attachments/1169635156118749234/1296990610883874928/image.png?ex=67144c22&is=6712faa2&hm=585d9b7a4e0b9397049edd72607173e0074fc1b8aa64ed3a0dab46efeb78c40b&",
+                    "descricao": "A Emesp Jovita Franco Arouche é uma escola municipal de educação especial localizada em Mogi das Cruzes, referência no atendimento a alunos com Transtorno do Espectro Autista (TEA) no Alto Tietê. Fundada em 1987, a instituição oferece um ensino personalizado e de qualidade, com acompanhamento de profissionais especializados em educação especial, fonoaudiologia, psicologia e fisioterapia.",
+                    "contato": {
+                        "telefone": "(11) 4721-2456",
+                        "site": "Não informado."
+                    },
+                    "funcionamento": "Aberto de segunda a sexta, das 07:00 às 18:00. Fechado aos sábados e domingos.",
+                    "endereco": "Rua José D' Carlo, 85 - Vila Lavínia, 08737-050",
+                    "maps": "https://www.google.com/maps/place/Escola+Municipal+de+Educação+Especial+(EMESP)+Profª+Jovita+Franco+Arouche/@-23.5377945,-46.2069043,15z/data=!4m2!3m1!1s0x0:0x3fd0ec95de90c9d5?sa=X&ved=1t:2428&ictx=111"
+                }
+            ]
+        }
+    ]
+}

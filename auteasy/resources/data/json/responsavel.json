@@ -1,0 +1,108 @@
+{
+    "abas": [
+        {
+            "recursos":
+                [
+                    {
+                        "jogos":
+                            [
+                                {
+                                    "titulo": "Quebra-cabeça",
+                                    "descricao": "Jogo de quebra-cabeça para Android. Autor: Easybrain.",
+                                    "imagem": "https://play-lh.googleusercontent.com/R8HYXZtwjUG-ypbaDd3tPAAub9RrkjzgTUHW3TC3CzEwQeFrndM1SnRwyqB32ozRj64=s48-rw",
+                                    "link": "https://play.google.com/store/apps/details?id=com.easybrain.jigsaw.puzzles&pli=1"
+                                },
+                                {
+                                    "titulo": "Jigsaw",
+                                    "descricao": "Site de quebra-cabeças online. Autor: Jigsaw",
+                                    "imagem": "https://i.ytimg.com/vi/1JKcuzV7n0s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBa8JsGATeD5PIjBva-h0B7YOaCow",
+                                    "link": "https://www.jigsawplanet.com/"
+                                },
+                                {
+                                    "titulo": "Endless Reader",
+                                    "descricao": "Aplicativo que ensina palavras e letras através de animações. Autor: Originator Inc.",
+                                    "imagem": "https://s2-techtudo.glbimg.com/yL9sNOOMh8uuvIlmtV6TtsJhsCI=/1080x608/top/smart/https://i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/h/w/nVgHM8S4W2ccZhpWcZqw/2013-03-21-draw-something-2-promete-repetir-o-sucesso-do-jogo-original.jpg",
+                                    "link": "https://play.google.com/store/apps/details?id=com.easybrain.find.the.difference"
+                                }
+                            ]
+                    },
+                    {
+                        "videos":
+                            [
+                                {
+                                    "titulo": "O que é TEA?",
+                                    "autor": "ALUZAZUL",
+                                    "duracao": "5:46",
+                                    "link": "https://www.bing.com/videos/riverview/relatedvideo?q=O+que+%c3%a9+TEA%3f+ALUZAZUL&&view=riverview&mmscn=mtsc&mid=4AF39938B599733104F94AF39938B599733104F9&&aps=15&FORM=VMSOVR",
+                                    "ano": "2017"
+                                },
+                                {
+                                    "titulo": "A história do Autismo. Como chegamos aos sintomas de TEA!",
+                                    "autor": "Mayra Gaiato",
+                                    "duracao": "4:42",
+                                    "link": "https://www.bing.com/videos/riverview/relatedvideo?q=A+hist%c3%b3ria+do+Autismo.+Como+chegamos+aos+sintomas+de+TEA!&&view=riverview&mmscn=mtsc&mid=57FD147B2DFFD98AE7CF57FD147B2DFFD98AE7CF&&aps=221&FORM=VMSOVR",
+                                    "ano": "2020"
+                                },
+                                {
+                                    "titulo": "Inauguração da Escola Clínica Transtorno do Espectro Autista (TEA) de Mogi das Cruzes",
+                                    "autor": "Notícias de Mogi",
+                                    "duracao": "3:44",
+                                    "link": "https://www.youtube.com/watch?v=YJm1eDA5XiE&pp=ygUmRXNjb2xhIENsw61uaWNhIFRFQSBkZSBNb2dpIGRhcyBDcnV6ZXM%3D",
+                                    "ano": "2024"
+                                },
+                                {
+                                    "titulo": " Autista de Mogi cria curta-metragem na escola",
+                                    "autor": "Cássio Andrade, Diário TV 1ª Edição",
+                                    "duracao": "8:48",
+                                    "link": "https://g1.globo.com/sp/mogi-das-cruzes-suzano/noticia/2019/04/02/autista-de-mogi-cria-curta-metragem-na-escola.ghtml",
+                                    "ano": "2019"
+                                }
+                            ]
+                    },
+                    {
+                        "artigos":
+                            [
+                                {
+                                    "titulo": "Especialista da UMC vê aumento no número de diagnósticos de Autismo",
+                                    "autor": "O Diário",
+                                    "paginas": "1",
+                                    "link": "https://www.odiariodemogi.net.br/historico/especialista-da-umc-ve-aumento-no-numero-de-diagnosticos-de-autismo-1-38079/",
+                                    "ano": "2022"
+                                },
+                                {
+                                    "titulo": "Sepaco cria clínica especializada em pessoas com autismo em Mogi das Cruzes",
+                                    "autor": "Redação Saúde Digital News",
+                                    "paginas": "1",
+                                    "link": "https://saudedigitalnews.com.br/15/06/2023/sepaco-cria-clinica-especializada-em-pessoas-com-autismo-em-mogi-das-cruzes/",
+                                    "ano": "2023"
+                                },
+                                {
+                                    "titulo": "Prefeitura de Mogi inaugura Escola Clínica Transtorno do Espectro Autista",
+                                    "autor": "Felipe Alves",
+                                    "paginas": "1",
+                                    "link": "https://portalgazetaregional.com.br/prefeitura-de-mogi-inaugura-escola-clinica-transtorno-do-espectro-autista/",
+                                    "ano": "2024"
+                                }
+                            ]
+                    }
+                ]
+        },
+        {
+            "suporte":
+                [
+                    {
+                        "pergunta": "O que é Transtorno de Espectro Autista (TEA)?",
+                        "resposta": "O Transtorno de Espectro Autista (TEA) é uma condição do neurodesenvolvimento que afeta a comunicação, o comportamento e as relações sociais. <br>Segundo a Dr.ª Sani Ribeiro, pneumologista pediátrica, o TEA pode causar dificuldades para formar frases, realizar expressões faciais ou se comportar dentro da 'norma social'. <br><br>Fonte: www.tuasaude.com/transtorno-do-espectro-do-autismo/"
+                    },
+                    {
+                        "pergunta": "Quando o TEA é diagnosticado?",
+                        "resposta": "A identificação geralmente ocorre na infância, mas pode persistir na adolescência e na idade adulta, sendo importante o acompanhamento com uma equipe multidisciplinar para melhorar os sintomas e a qualidade de vida. <br><br>Fonte: www.tuasaude.com/transtorno-do-espectro-do-autismo/"
+                    },
+                    {
+                        "pergunta": "Quais são os impactos do TEA?",
+                        "resposta": "O Transtorno de Espectro Autista (TEA) pode impactar a comunicação, o comportamento e as relações sociais. Pessoas com TEA podem enfrentar dificuldades em formar frases, expressões faciais e comportamentos sociais, afetando sua interação com o ambiente e as pessoas ao seu redor. <br><br>Fonte: www.tuasaude.com/transtorno-do-espectro-do-autismo/"
+                    }
+                ]
+        }
+    ]
+}

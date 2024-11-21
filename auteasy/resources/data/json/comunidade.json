@@ -1,0 +1,84 @@
+{
+    "Comunidade": [
+        {
+            "Online": [
+                {
+                    "titulo": "Instituto TEA",
+                    "imagem": "https://cdn.discordapp.com/attachments/1169635156118749234/1296991300293361744/image.png?ex=67144cc6&is=6712fb46&hm=97b34e3a1414eb45e9b8b06171f4ec1e46a5ef1638109aa54d4d863b710fca88&",
+                    "descricao": "O Instituto TEA é uma referência em atendimento especializado para crianças e adolescentes com Transtorno do Espectro Autista (TEA). Com uma equipe multidisciplinar e abordagem baseada na ciência ABA, oferecemos terapias individualizadas e em grupo, além de orientação para famílias. Nosso objetivo é promover o desenvolvimento integral e a inclusão social de cada indivíduo.",
+                    "contato": {
+                        "telefone": "(11) 98332-4184",
+                        "site": "institutotea.com.br"
+                    },
+                    "plataformas": {
+                        "whatsapp": "",
+                        "facebook": "https://www.instagram.com/institutoteaoficial/",
+                        "email": "tendimentoanaliafranco@institutotea.com.br"
+                    },
+                    "funcionamento": "Online",
+                    "endereco": "Online",
+                    "tipo": "ONG",
+                    "maps": "Online"
+                },
+                {
+                    "titulo": "Autismo e Realidade",
+                    "imagem": "https://cdn.discordapp.com/attachments/1169635156118749234/1296993970492149823/image.png?ex=67144f43&is=6712fdc3&hm=882269335d0023177d598a690d169ba8d675e581480c8ce1ad71532fccbd5dea&",
+                    "descricao": "O site Autismo e Realidade oferece ferramentas e orientações para familiares, amigos e cuidadores de pessoas com Transtorno do Espectro Autista (TEA), ajudando a lidar com as dificuldades do dia a dia e construir uma rotina saudável e funcional.",
+                    "contato": {
+                        "telefone": "Não informado.",
+                        "site": "autismoerealidade.org.br"
+                    },
+                    "plataformas": {
+                        "whatsapp": "",
+                        "facebook": "https://www.facebook.com/autismoerealidade/",
+                        "email": "contato@autismoerealidade.org.br"
+                    },
+                    "funcionamento": "Online",
+                    "endereco": "Online",
+                    "tipo": "ONG",
+                    "maps": "Online"
+                }
+            ]
+        },
+        {
+            "Presencial": [
+                {
+                    "titulo": "Associação de Colaboradores e Familiares dos Autistas de Mogi das Cruzes",
+                    "imagem": "https://cdn.discordapp.com/attachments/1169635156118749234/1296995891684708402/image.png?ex=6714510d&is=6712ff8d&hm=e7575d26d068cbcc9c6d7c747f0afd1be086f88d4ce63288393efcaef59c8c36&",
+                    "descricao": "Luta pela consolidação de parcerias com órgãos públicos governamentais, instituições e famílias para ações concretas em prol dos autistas adultos.",
+                    "contato": {
+                        "telefone": "(11) 97704-0841",
+                        "site": "www.facebook.com/ACFAMOGI/?locale=pt_BR"
+                    },
+                    "plataformas": {
+                        "whatsapp": "https://api.whatsapp.com/send?phone=%2B5511977040841&context=ARDUMlCTrLhoU1JeoXV2o2ZD9j4tLlvU752vDxSjubPlt561CGIBCk_yx_hS0SYsXspHok34ZFKYmW8hjrJqtFb-aXSaBGw8qA9sjwI31duXN2kt-eKa0wfroLMRGLHnrvZxpOpC8dBSD2TT5NTzYcF9YA&source=FB_Page&app=facebook&entry_point=page_cta",
+                        "facebook": "https://www.facebook.com/ACFAMOGI/?locale=pt_BR",
+                        "email": "autistasadultos@hotmail.com"
+                    },
+                    "funcionamento": "Não informado.",
+                    "endereco": "Av. Pedro Romero, 283 - Jardim Rodeio, Mogi das Cruzes - SP",
+                    "tipo": "Grupo",
+                    "maps": "https://www.google.com/maps/place/Escola+Clínica+Transtorno+do+Espectro+Autista/@-23.5009898,-46.1772457,15z/data=!4m2!3m1!1s0x0:0x2cbf4297365c476d?sa=X&ved=1t:2428&ictx=111"
+                },
+                {
+                    "titulo": "APAE de Mogi das Cruzes",
+                    "imagem": "https://www.omunicipio.jor.br/wordpress/wp-content/uploads/2018/08/Acao-Voluntaria-APAE-2018-13.jpg",
+                    "descricao": "A APAE de Mogi das Cruzes é uma organização que oferece serviços de assistência social, educação e saúde para pessoas com deficiência, promovendo inclusão e desenvolvimento. Com diversas atividades e projetos, a APAE busca proporcionar uma vida digna e plena para seus atendidos.",
+                    "contato": {
+                        "telefone": "(11) 4728-4999",
+                        "site": "apaemc.org.br"
+                    },
+                    "plataformas": {
+                        "whatsapp": "",
+                        "facebook": "https://www.facebook.com/apae.mogidascruzes",
+                        "email": "apae@apaemc.org.br"
+                    },
+                    "funcionamento": "Segunda a sexta, das 07:00 às 18:00.",
+                    "endereco": "Rua Carmem Mouras Santos, 134, CEP: 08717-830 – Mogi das Cruzes – SP",
+                    "tipo": "ONG",
+                    "maps": "https://www.google.com/maps/place/Associação+de+Pais+e+Amigos+dos+Excepcionais+de+Mogi+das+Cruzes/@-23.5291522,-46.195238,15z/data=!4m2!3m1!1s0x0:0xd52a0d0fc163cf30?sa=X&ved=1t:2428&hl=pt-BR&ictx=111"
+                }
+            ]
+        }
+    ]
+}
